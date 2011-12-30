@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %} Новости {% endblock %}
+
+{% block content %}
+<a href="/news/" class="spisok">Все новости</a>
+<div class="post">
+	<h2>{{ carnews.title }}</h2>
+	<p>{{ carnews.content|safe }}</p>
+</div>
+{% endblock %}

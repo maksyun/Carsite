@@ -1,0 +1,418 @@
+﻿/* reset */
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+/* fonts */
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif;}table{font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}/* **************** TEMPLATE ***************** */
+/* ====== Page Head, Body, and Foot ====== */
+body{_text-align:center;}/* IE5.5 */
+.main{display:table-cell;*display:block;width:auto;}
+.body,.main{*zoom:1;}
+.body:after,.main:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+.page{margin:0 auto;width:950px;_text-align:left;} /* wraps other template elems to set width */ /* text-align IE5.5 */
+/* "old school" and "liquid" extend page to allow for different page widths */
+.oldSchool{width:750px;}
+.gs960{width:960px;}
+.liquid{width:auto;margin:0;}
+/* ====== Columns ====== */
+.leftCol{float:left;width:250px;_margin-right:-3px;}
+.rightCol{float:right;width:300px;_margin-left:-3px;}
+/* extend columns to allow for common column widths */
+.gMail{width:160px;}
+.gCal{width:180px;}
+.yahoo{width:240px;}
+.myYahoo{width:300px;}
+body{font-family:"Myriad Pro","Segoe UI",Helvetica, Arial, sans-serif;}
+/* **************** CONTENT OBJECTS ***************** */
+
+/* ====== Elements ====== */
+img{display:block;}
+em{font-style: italic;}
+strong{font-weight:bold;}
+hr{border: 5px solid #e2e2e2; border-width: 0 0 5px 0; margin: 20px 10px 10px 10px;}
+code{color:#0B8C8F;}
+
+.important a{font-weight:bold;}/* what is this? */
+/* links */
+a {color: #2c4460; text-decoration: none;}
+a:focus, a:hover {text-decoration: underline;}
+a:focus{background-color:#FFFFCC;}
+a:visited { color:#005a9c; }
+/* ====== Lists ======*/
+/* numbered list */
+ol.simpleList li{list-style-type: decimal; margin-left:40px;}
+/* standard list */
+ul.simpleList li{list-style-type:disc; margin-left:40px;}
+/* ====== blockquote ====== */
+cite{display:block; text-align:right; padding-top: 10px;}
+/* ====== callout ====== */
+.callout{font-size:189%;color:#999999; font-style:italic;}
+.callout cite{display:block; text-align:right;padding-top: 30px; font-size:69.25%;}
+.callout span.quot{font-size: 500%; vertical-align: sub; color:#e2e2e2; line-height:25px; font-weight:bold;}
+.callout span.quotLast{vertical-align:middle;}
+/* ====== image treatments (get more from jason santa maria) ====== */
+.caption{font-size:13px; color:#666666; font-style:italic;padding-top:0;}
+/* will need to either
+1. find a way to capture the width of the caption in the width of the image or flash
+2. Set some default widths, mby use flickr widths?
+*/
+/* ====== special formatting classes ====== */
+.detail{color: #777; font-size:11px;display:block;}
+/* ====== images ====== */
+.icon{margin-right: 5px;}/** 
+ * Spacing classes 
+ * Should be used to modify the default spacing between objects (not between nodes of the same object)
+ * Please use judiciously. You want to be using defaults most of the time, these are exceptions! 
+ * <type><location><size>
+ */
+ /* ====== Default spacing ====== */
+h1, h2, h3, h4, h5, h6, ul, ol,dl, p,blockquote, .media {margin:10px;}
+h1, h2, h3, h4, h5, h6,img{padding-bottom:0px;}
+pre{margin: 10px;}
+table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, table ol, table dl{padding:0;}
+/* ====== Headings ====== */
+/* .h1-.h6 classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
+h1, .h1{font-size:196%; font-weight:normal; font-style: normal; color:#AE0345;}
+h2, .h2{font-size:167%; font-weight:normal; font-style: normal; color:#AE0345;}
+h3, .h3{font-size:146.5%; font-weight:normal; font-style: normal; color:#DF2B72;}
+h4, .h4{font-size:123.1%; font-weight:normal; font-style: normal; color: #333;}
+h5, .h5{font-size:108%; font-weight:bold; font-style: normal; color:#AE0345;}
+h6, .h6{font-size:108%; font-weight:normal; font-style: italic; color:#333;}
+/** 
+ * Data Table 
+ * Allows you to align various table cells so that the alignment class can be placed on either the table, table row, or table cell 
+ * Cell takes precedence over table row and table
+ * Table row takes precedence over table
+ */
+.data{position:relative; zoom:1;vertical-align: top;text-align: left; /*border-right:solid 1px transparent;*//* border fixes a FF2 bug which causes the data table to overlay its borders*/}
+.data table {width:100%; table-layout:fixed;}
+th, td{/*vertical-align:top;*/}
+/* horizontal alignment */
+.txtC, table .txtC td, table .txtC th, .data .txtC th, .data .txtC td{text-align:center;}
+.txtL, table .txtL td, table .txtL th, .data .txtL th, .data .txtL td{text-align:left;}
+.txtR, table .txtR td, table .txtR th, .data .txtR th, .data .txtR td{text-align:right;}
+/* vertical alignment */
+.txtT, table .txtT td, table .txtT th, .data .txtT th, .data .txtT td{vertical-align:top;}
+.txtB, table .txtB td, table .txtB th, .data .txtB th, .data .txtB td{vertical-align:bottom;}
+.txtM, table .txtM td, table .txtM th, .data .txtM th, .data .txtM td{vertical-align:middle;}
+.data th,.data td{padding:3px 20px}
+/* ====== Grids ====== */
+.line:before,.line:after{content:"";display:table;}
+.line:after{clear:both;}
+.line{*zoom:1;}
+.unit{float:left;}
+.size1of1{float:none;}
+.size1of2{width:50%;}
+.size1of3{width:33.33333%;}
+.size2of3{width:66.66666%;}
+.size1of4{width:25%;}
+.size3of4{width:75%;}
+.size1of5{width:20%;}
+.size2of5{width:40%;}
+.size3of5{width:60%;}
+.size4of5{width:80%;}
+.lastUnit{float:none;display:block;display:table-cell;width:9999em;*width:auto;*zoom:1;_position:relative;_left:-3px;_margin-right:-3px;}
+
+body { 
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+.page {
+	margin:16px auto;
+	padding: 15px 24px;
+	width: 917px;
+	border:#4e7178 solid 3px;
+	position: relative;
+}
+
+.head .menu{
+	margin-top: 40px;
+	clear: right;
+    float: right;
+}
+.menu{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+a:focus, a:active {
+    background:transparent;
+	color:#74c0cf;
+}
+.menu a.active {
+    color:#74c0cf;
+}
+.menu a {
+    color:#000;
+}
+.menu li{
+    margin-left: -2px;
+    margin-right: 2px;
+    border-left: #404040 solid 2px;
+    display: inline-block;
+    padding: 0 17px;
+    float:left;
+	}
+.menu li:first-child {
+	border:0px;
+}
+.body{
+ 	min-height: 730px;
+}
+.content{
+	overflow: hidden;
+	width: 673px;
+	float: left;
+	margin-left: 10px;
+}
+.post{
+	border-bottom:1px solid #e1e1e1;
+	padding-bottom:10px;
+}
+.post_date{
+	margin-left: 10px;
+	margin-top:10px;
+}
+.spisok{
+margin-left:10px;
+}
+.sidebar{
+	width: 215px;
+	float: right;
+}
+.tizer {
+	clear: both;
+}
+
+h1, a, .hilight {
+    color: #4e7178;
+}
+h1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+h2, h3, h4, h5, h6 {
+    color: #4e7178;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+.sidebar h2 {
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+    margin-left: 0;
+    padding-left: 14px;
+}
+.logo {
+    float: left;
+    margin-bottom: 24px;
+    margin-top: 9px;
+}
+.sidebar .news {
+    margin: 0 0 0 14px;
+}
+
+.sidebar .news li {
+    list-style: disc;
+    margin-bottom: 23px;
+}
+.sidebar .news .date {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.sidebar .search {
+    margin-left: 14px;
+}
+
+.sidebar .search .yaform__input-text {
+    padding: 4px 7px 3px;
+    border: 1px solid #e1e1e1;
+    width: 160px;
+}
+.sidebar .contacts {
+	margin: 10px;
+}
+.sidebar .phone {
+    font-size: 14px;
+	text-align:left;
+}
+.foot {
+    border: 0px;
+    overflow: hidden;
+    padding-bottom: 5px;
+    padding-top:10px;
+}
+
+.foot .copy {
+    margin-left: 24px;
+}
+
+.foot ul {
+    margin-top: 0;
+}
+.foot .col1 {
+    float:left;
+    padding-top:4px;
+}
+
+.foot .col3 {
+    float:left;
+	margin-right:30px;
+}
+.foot .col3 a {
+    float:left;
+}
+.foot .col3 div {
+    margin-top:6px;
+    overflow:hidden;
+    padding-left:7px;
+	float:left;
+}
+.foot .col2 {
+    float:left;
+    width:620px;
+}
+.foot .col4 {
+    float:left;
+    margin-top:5px;
+}
+.nivoSlider {
+	position:relative;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+}
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	opacity:0.8; /* Overridden by captionOpacity setting */
+	width:100%;
+	z-index:8;
+}
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav a {
+	position:relative;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
+.theme-default .nivoSlider {
+	position:relative;
+	background:#fff url({{ MEDIA_URL }}loading.gif) no-repeat 50% 50%;
+    margin-bottom:50px;
+    -webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    box-shadow: 0px 1px 5px 0px #4a4a4a;
+}
+.theme-default .nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.theme-default .nivoSlider a {
+	border:0;
+	display:block;
+}
+
+.theme-default .nivo-controlNav {
+	position:absolute;
+	left:50%;
+	bottom:-42px;
+    margin-left:-40px; /* Tweak this to center bullets */
+}
+.theme-default .nivo-controlNav a {
+	display:block;
+	width:22px;
+	height:22px;
+	background:url({{ MEDIA_URL }}img/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+}
+.theme-default .nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.theme-default .nivo-directionNav a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:url({{ MEDIA_URL }}img/arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+.theme-default a.nivo-nextNav {
+	background-position:-30px 0;
+	right:15px;
+}
+.theme-default a.nivo-prevNav {
+	left:15px;
+}
+
+.theme-default .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.theme-default .nivo-caption a {
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+.theme-default .nivo-caption a:hover {
+    color:#fff;
+}

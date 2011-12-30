@@ -1,0 +1,80 @@
+﻿{% load mytag %}
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<meta content="text/html; charset=utf-8" />
+	<link href="{{ MEDIA_URL }}css/style.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });</script>
+</head>
+<body>
+<div class="page">
+	<div class="head">
+		<a href="#" class="logo"><img src="{{ MEDIA_URL }}img/logo.png" alt="автомастерская гараж.все виды ремонтных услуг" /></a>
+		<ul class="menu">
+			<li class="active"><a href="/">Главная</a></li>
+			<li><a href="/news/">Новости</a></li>
+			<li><a href="#">Услуги</a></li>
+			<li><a href="#">О нас</a></li>
+			<li><a href="#">Контакты</a></li>
+		</ul>
+	</div>
+	<div class="tizer">
+			<div class="slider-wrapper theme-default">
+            <div class="ribbon"></div>
+            <div id="slider" class="nivoSlider">
+				<img src="{{ MEDIA_URL }}img/1.jpg" alt="" title="#remont" />
+                <img src="{{ MEDIA_URL }}img/2.jpg" alt="" title="#hod" />
+                <img src="{{ MEDIA_URL }}img/3.jpg" alt="" data-transition="slideInLeft" title="#diag" />
+            </div>
+            <div id="remont" class="nivo-html-caption">
+                <h2>Ремонт двигателей любой сложности</h2>
+            </div>
+			<div id="hod" class="nivo-html-caption">
+                <h2>Ремонт ходовой</h2>
+            </div>
+			<div id="diag" class="nivo-html-caption">
+                <h2>Диагностика ошибок ЭБУ</h2>
+            </div>
+        </div>
+	
+	</div>
+	<div class="body">
+	<div class="content">
+		{% block content %}
+		{% endblock %}
+	
+	</div>
+		
+		
+		<div class="sidebar">
+			<h2>Поиск по сайту</h2>
+			<div class="search"><div class="yandexform" onclick="return {type: 3, logo: 'rb', arrow: true, webopt: false, websearch: false, bg: '#FFFFFF', fg: '#18AEE0', fontsize: 12, suggest: true, site_suggest: true, encoding: '', language: 'ru'}"><form action="#" method="get"><input type="hidden" name="searchid" value="746344"/><input name="text"/><input type="submit" value="Найти"/></form></div><script type="text/javascript" src="http://site.yandex.net/load/form/1/form.js" charset="utf-8"></script>
+                    </div>
+			<h2>Новости</h2>			
+			<ul class="news">
+			{% news %}
+			</ul>
+			<p><a href="/news/">Архив новостей</a></p>
+			<h2>Телефоны</h2>
+			<div class="contacts">
+				<p class="phone">8&nbsp;(909)&nbsp;123-11-22</p>
+				<p class="phone">8&nbsp;(909)&nbsp;123-11-22</p>
+				<p><a href="#">Полные контактные данные</a></p>
+				<p><a href="#">Схема проезда</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page foot">
+		<div class="copy">&copy; Автомастерская ГАРАЖ.</div></div>
+
+</div>
+</body>
+
+</html>

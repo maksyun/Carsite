@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Новости{% endblock %}
+
+{% block content %}
+{% for carnews in object_list %}
+
+<div class="news_post">
+	<p>{{ carnews.created|date:"j.n.Y" }}&nbsp;&nbsp;<a href="{{ carnews.slug }}">{{ carnews.title }}</a></p>
+</div>
+{% endfor %}
+
+{% endblock %}

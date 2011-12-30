@@ -1,0 +1,7 @@
+<ul>
+	{% for news in news %}
+		<li>{{ news.created|date:"j.n.Y"}}<br/><a href="/news/{{ news.slug }}">{{ news.title }}</a></li>
+	{% endfor %}
+	
+</ul>
+
