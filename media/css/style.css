@@ -122,6 +122,9 @@ body {
 	border:#4e7178 solid 3px;
 	position: relative;
 }
+.logo{
+margin-left:30px;
+}
 
 .head .menu{
 	margin-top: 40px;
@@ -136,8 +139,12 @@ a:focus, a:active {
     background:transparent;
 	color:#74c0cf;
 }
-.menu a.active {
+.menu a:active {
     color:#74c0cf;
+}
+.menu a:hover {
+    color:#74c0cf;
+#    background-color:#4e7178;
 }
 .menu a {
     color:#000;
@@ -415,4 +422,11 @@ h2, h3, h4, h5, h6 {
 }
 .theme-default .nivo-caption a:hover {
     color:#fff;
+}
+
+.contact {
+	border:0;
+}
+.archive{
+	margin-left: 25px;
 }

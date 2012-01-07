@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Отправить сообщение</h1>
+
+    {% if errors %}
+        <ul>
+            {% for error in errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form action="/contact/thanks/" method="post" class="contact">{% csrf_token %}
+        <p><label>Тема:</label> <br /><input type="text" name="subject"></p>
+        <p><label>Ваш email:</label><br /> <input type="text" name="email"></p>
+        <p><label>Сообщение:</label><br /> <textarea name="message" rows="10" cols="50"></textarea></p>
+        <p><input type="submit" value="Отправить"></p>
+    </form>
+
+{% endblock %}

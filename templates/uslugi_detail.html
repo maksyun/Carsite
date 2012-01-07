@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}{{ uslugi.title }}{% endblock %}
+
+{% block content %}
+<a href="/uslugi/" class="spisok">Все услуги</a>
+<div class="post">
+<h2>{{ uslugi.title }}</h2>
+<p>{{ uslugi.content|safe }}</p>
+</div>
+{% endblock %}

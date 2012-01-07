@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Услуги{% endblock %}
+{% block content %}
+
+{% for uslugi in object_list %}
+<div class="new_post">
+<p><a href="{{ uslugi.slug }}">{{ uslugi.title }}</a></p>
+</div>
+{% endfor %}
+
+{% endblock %}
